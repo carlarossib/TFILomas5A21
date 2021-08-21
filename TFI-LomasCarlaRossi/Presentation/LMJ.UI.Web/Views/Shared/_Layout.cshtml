@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Equipo2 ">
+    <title>El mejor LMJ</title>
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="/images/ico/apple-touch-icon-57x57.png">
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/css")
+</head>
+
+<body>
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/"><h1><span class="pe-7s-gleam bounce-in"></span> LMJ</h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Sobre Nosotros", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Galeria", "Index", "Galeria")</li>
+                    <li>@Html.ActionLink("Artista", "Index", "Artista")</li>
+                    
+                    @if (!this.User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Ingresar", "Login", "Account")</li>
+                        <li>@Html.ActionLink("Crear Cuenta", "Registro", "Account")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Cerrar sesion", "Logout", "Account")</li>
+                    }
+
+
+                    @*<li class="dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas <i class="icon-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="project-item.html">Carrito De Compras</a></li>
+                <li><a href="blog-item.html">Iniciar Sesion</a></li>
+                <li><a href="404.html">Cuenta</a></li>
+            </ul>
+        </li>*@
+                    @*<li><span class="search-trigger"><i class="fa fa-search"></i></span></li>*@
+                    <li><span class="search-trigger"><i class="fa fa-shopping-cart"></i></span></li>
+                    @*<li><span class="search-trigger"><i class="fa fa-user"> </i></span></li>*@
+                </ul>
+            </div>
+        </div>
+    </header><!--/header-->
+
+        @RenderBody()
+
+    <div id="footer-wrapper">
+        <section id="bottom" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 about-us-widget">
+                        <h4>Envios</h4>
+                        <p>Contamos con el mejor servicio de envios, todos las compras pueden ser enviadas a todo el pais.</p>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Compañia</h4>
+                        <div>
+                            <ul class="arrow">
+                                <li><a href="#">Company Overview</a></li>
+                                <li><a href="#">Meet The Team</a></li>
+                                <li><a href="#">Our Awesome Partners</a></li>
+                                <li><a href="#">Our Services</a></li>
+                            </ul>
+                        </div>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Ultimos Articulos</h4>
+                        <div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img class="widget-img" src="images/portfolio/folio01.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <span class="media-heading"><a href="#">Blog Post A</a></span>
+                                    <small class="muted">Posted 14 April 2014</small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img class="widget-img" src="images/portfolio/folio02.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <span class="media-heading"><a href="#">Blog Post B</a></span>
+                                    <small class="muted">Posted 14 April 2014</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Visite nuestro local</h4>
+                        <address>
+                            <strong>Palermo soho</strong><br>
+                            CABA Argentina,<br>
+                            Migueletes 840 <br>
+                            <abbr title="Telefono"><i class="fa fa-phone"></i></abbr> +5411 3681 1985
+                        </address>
+                    </div> <!--/.col-md-3-->
+                </div>
+            </div>
+        </section><!--/#bottom-->
+
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        &copy; 2020 LMJ by Equipo2
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="pull-right">
+                            <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </div>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+</body>
+</html>
