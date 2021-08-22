@@ -25,7 +25,7 @@ namespace LMJ.Entities.Model
         public int OrderId { get; set; }
         public int ProductId { get; set; }
 
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual Compra Order { get; set; }
+        public virtual Producto Product { get; set; }
     }
 }

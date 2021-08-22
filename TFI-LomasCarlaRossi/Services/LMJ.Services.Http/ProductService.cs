@@ -24,7 +24,7 @@ namespace LMJ.Services.Http
         /// <returns></returns>
         [HttpPost]
         [Route("Agregar")]
-        public Product Add(Product product)
+        public Producto Add(Producto product)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace LMJ.Services.Http
         /// <param name="product"> </param>
         [HttpPut]
         [Route("Editar")]
-        public void Edit(Product product)
+        public void Edit(Producto product)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace LMJ.Services.Http
         /// <returns></returns>
         [HttpGet]
         [Route("Buscar/{id}")]
-        public Product Find(int id)
+        public Producto Find(int id)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace LMJ.Services.Http
         /// <returns></returns>
         [HttpGet]
         [Route("Listar")]
-        public List<Product> List()
+        public List<Producto> List()
         {
             try
             {

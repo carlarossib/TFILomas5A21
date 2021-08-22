@@ -8,10 +8,10 @@ namespace LMJ.Entities.Model
     /// <summary>
     /// Order Metadata class
     /// </summary>
-    [MetadataType(typeof(OrderMetadata))]
-    public partial class Order
+    [MetadataType(typeof(CompraMetadata))]
+    public partial class Compra
     {
-        public class OrderMetadata
+        public class CompraMetadata
         {
             /// <summary>
             /// Id

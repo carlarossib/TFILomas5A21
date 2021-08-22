@@ -18,7 +18,7 @@ namespace LMJ.Entities.Model
     
     [Serializable]
     
-    public partial class Order : IdentityBase
+    public partial class Compra : IdentityBase
     {
 
         public DateTime OrderDate { get; set; }

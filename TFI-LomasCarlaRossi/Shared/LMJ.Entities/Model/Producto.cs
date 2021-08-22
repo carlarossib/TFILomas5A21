@@ -16,28 +16,30 @@ using System.Runtime.Serialization;
 namespace LMJ.Entities.Model
 {
     [Serializable]
-    public partial class Product : IdentityBase
+    public partial class Producto : IdentityBase
     {
-        public Product()
+        public Producto()
         {
             this.CartItem = new HashSet<CartItem>();
             this.OrderDetail = new HashSet<OrderDetail>();
             this.Rating = new HashSet<Rating>();
         }
 
-        public string Title { get; set; }
+        public string Tipo { get; set; }
 
-        public string Description { get; set; }
+        public string Descripcion { get; set; }
 
         public string Image { get; set; }
 
-        public double Price { get; set; }
+        public double Precio { get; set; }
 
-        public int QuantitySold { get; set; }
+        public int Cantidad { get; set; }
+
+        public int Color { get; set; }
 
         public double AvgStars { get; set; }
-        public int ArtistId { get; set; }
-        public virtual Artist Artist { get; set; }
+        //public int ArtistId { get; set; }
+        //public virtual Artist Artist { get; set; }
         public virtual ICollection<CartItem> CartItem { get; set; }
         public virtual ICollection<OrderDetail> OrderDetail { get; set; }
         public virtual ICollection<Rating> Rating { get; set; }

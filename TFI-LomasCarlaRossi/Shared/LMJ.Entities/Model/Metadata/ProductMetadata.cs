@@ -9,7 +9,7 @@ namespace LMJ.Entities.Model
     /// Product Metadata class
     /// </summary>
     [MetadataType(typeof(ProductMetadata))]
-    public partial class Product
+    public partial class Producto
     {
         public class ProductMetadata
         {

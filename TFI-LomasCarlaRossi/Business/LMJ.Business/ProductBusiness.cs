@@ -10,20 +10,20 @@ namespace LMJ.Business
 {
     public class ProductBusiness
     {
-        private BaseDataService<Product> db = new BaseDataService<Product>();
-        public List<Product> GetProducts()
+        private BaseDataService<Producto> db = new BaseDataService<Producto>();
+        public List<Producto> GetProducts()
         {
             return db.Get();
         }
-        public Product EditProduct(Product product)
+        public Producto EditProduct(Producto product)
         {
             return db.Update(product, product.Id);
         }
-        public Product GetById(int id)
+        public Producto GetById(int id)
         {
             return db.GetById(id);
         }
-        public Product Create(Product product)
+        public Producto Create(Producto product)
         {
             return db.Create(product);
         }

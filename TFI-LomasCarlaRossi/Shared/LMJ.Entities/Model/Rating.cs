@@ -21,6 +21,6 @@ namespace LMJ.Entities.Model
 
         public string UserName { get; set; }
 
-        public virtual Product Product { get; set; }
+        public virtual Producto Product { get; set; }
     }
 }

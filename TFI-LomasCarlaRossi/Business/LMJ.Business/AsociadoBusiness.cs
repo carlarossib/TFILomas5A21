@@ -8,44 +8,44 @@ using System.Threading.Tasks;
 
 namespace LMJ.Business
 {
-    public class ArtistBusiness
+    public class AsociadoBusiness
     {
-        public List<Artist> List()
+        public List<Asociado> List()
         {
-            List<Artist> result = default(List<Artist>);
-            var artistDAC = new ArtistDAC();
-            result = artistDAC.Select();
+            List<Asociado> result = default(List<Asociado);
+            var asociadoDAC = new AsociadoDAC();
+            result = asociadoDAC.Select();
             return result;
         }
 
-        public void Edit(Artist artist)
+        public void Edit(Asociado asociado)
         {
-            var artistDAC = new ArtistDAC();
-            artistDAC.UpdateById(artist);
+            var asociadoDAC = new AsociadoDAC();
+            asociadoDAC.UpdateById(asociado);
         }
 
 
-        public Artist Get(int id)
+        public Asociado Get(int id)
         {
-            var artistDAC = new ArtistDAC();
-            var result = artistDAC.SelectById(id);
+            var asociadoDAC = new AsociadoDAC();
+            var result = asociadoDAC.SelectById(id);
             return result;
         }
 
-        public Artist Add(Artist artist)
+        public Asociado Add(Asociado asociado)
         {
-            Artist result = default(Artist);
-            var artistDAC = new ArtistDAC();
+            Asociado result = default(Asociado);
+            var asociadoDAC = new AsociadoDAC();
 
-            result = artistDAC.Create(artist);
+            result = asociadoDAC.Create(asociado);
             return result;
         }
 
 
         public void Remove(int id)
         {
-            var artistDAC = new ArtistDAC();
-            artistDAC.DeleteById(id);
+            var asociadoDAC = new AsociadoDAC();
+            asociadoDAC.DeleteById(id);
         }
         //private BaseDataService<Artist> db = new BaseDataService<Artist>();
         //public List<Artist> GetArtist()

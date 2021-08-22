@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4bbf815eb9db49fd8b8f079b8f0f973e" Name="Diagram1">
+        <EntityTypeShape EntityType="LMJModel.Asociado" Width="1.5" PointX="12" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Bitacora" Width="1.5" PointX="5.25" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Caja" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Cliente" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Compra" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.DVV" Width="1.5" PointX="9.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Envio" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Formulario" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Idioma" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Permiso" Width="1.5" PointX="3" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Producto" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Promocion" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Proveedor" Width="1.5" PointX="1.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Rol" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Traduccion" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Usuario" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.VentaPagos" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Caja_Producto" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.DetalleVentaPagos" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Rol_Permiso" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMJModel.Rol_Usuario" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <AssociationConnector Association="LMJModel.FK_Asociado_Promocion" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Bitacora_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Caja_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Caja_Producto_Caja" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Cliente_Caja" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_DetalleVentaPagos_Caja" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Envio_Caja" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Cliente_Formulario" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Cliente_Idioma" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Compra_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Envio_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_VentaPagos_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Compra_VentaPagos" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Traduccion_Idioma" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Usuario_Idioma" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Rol_Permiso_Permiso" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Caja_Producto_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Producto_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_VentaPagos_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Rol_Permiso_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Rol_Usuario_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_Rol_Usuario_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="LMJModel.FK_DetalleVentaPagos_VentaPagos" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

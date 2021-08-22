@@ -26,7 +26,7 @@ namespace LMJ.Services.Http
         {
             try
             {
-                var bc = new ArtistBusiness();
+                var bc = new AsociadoBusiness();
                 return bc.Add(artist);
             }
             catch (Exception ex)
@@ -51,7 +51,7 @@ namespace LMJ.Services.Http
         {
             try
             {
-                var bc = new ArtistBusiness();
+                var bc = new AsociadoBusiness();
                 bc.Edit(artist);
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace LMJ.Services.Http
         {
             try
             {
-                var bc = new ArtistBusiness();
+                var bc = new AsociadoBusiness();
                 return bc.Get(id);
             }
             catch (Exception ex)
@@ -103,7 +103,7 @@ namespace LMJ.Services.Http
         {
             try
             {
-                var bc = new ArtistBusiness();
+                var bc = new AsociadoBusiness();
                 return bc.List();
             }
             catch (Exception ex)
@@ -127,7 +127,7 @@ namespace LMJ.Services.Http
         {
             try
             {
-                var bc = new ArtistBusiness();
+                var bc = new AsociadoBusiness();
                 bc.Remove(id);
             }
             catch (Exception ex)
